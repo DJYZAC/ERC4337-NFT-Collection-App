@@ -22,7 +22,7 @@ export default function ProfilePage() {
                 <Text fontWeight={"bold"}>My Elements:</Text>
                 <SimpleGrid columns={4} spacing={10} my={4}>
                 {!loadingOwnedNFTs && ownedNFTs?.map((nft) => (
-                    <Card overflow={"hidden"} p={2}>
+                    <Card key={nft.metadata.id} overflow={"hidden"} p={2}>
                         <MediaRenderer
                             src={nft.metadata.image}
                             height="100%"
