@@ -9,6 +9,8 @@ const Home: NextPage = () => {
 
   const { data: metadata, isLoading: loadingMetadata } = useMetadata(contract);
   
+  const collectionImage = metadata?.image;
+  const collectionName = metadata?.name;
   
   
 
