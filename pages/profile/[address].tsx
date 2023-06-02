@@ -16,10 +16,10 @@ export default function ProfilePage() {
     const toast = useToast();
     return (
         <Container maxW={"1200px"} mt={10}>
-            <Button onClick={() => router.push("/")}>Back</Button>
-            <Heading mt={10}>Profile</Heading>
+            <Button onClick={() => router.push("/")}>Voltar</Button>
+            <Heading mt={10}>Meu perfil</Heading>
             <Box mt={10}>
-                <Text fontWeight={"bold"}>My Elements:</Text>
+                <Text fontWeight={"bold"}>Meus NFT:</Text>
                 <SimpleGrid columns={4} spacing={10} my={4}>
                 {!loadingOwnedNFTs && ownedNFTs?.map((nft) => (
                     <Card key={nft.metadata.id} overflow={"hidden"} p={2}>
@@ -30,9 +30,9 @@ export default function ProfilePage() {
                         />
                         <Flex justifyContent={"space-between"} alignItems={"center"} direction={"row"} my={4}>
                             <Text ml={4} fontWeight={"bold"}>{nft.metadata.name}</Text>
-                            <Text mr={4}>Qty: {nft.quantityOwned}</Text>
+                            <Text mr={4}>Quantidade: {nft.quantityOwned}</Text>
                         </Flex>
-                        <Text fontSize={"x-small"} ml={4}>Transfer to:</Text>
+                        <Text fontSize={"x-small"} ml={4}>Transferir:</Text>
                         <Input 
                             placeholder={"0x00000"} 
                             width={"90%"}

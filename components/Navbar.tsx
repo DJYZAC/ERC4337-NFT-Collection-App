@@ -10,11 +10,11 @@ export default function Navbar() {
     return(
         <Container maxW={"1200px"} py={5}>
             <Flex justifyContent={"space-between"} alignItems={"center"}>
-                <Text fontWeight={"bold"}>NFT Collection</Text>
+                <Text fontWeight={"bold"}>NFT Coleção</Text>
                 {!address ? (
                     <ConnectWallet 
                         className={styles.walletButton}
-                        btnTitle="Sign In"
+                        btnTitle="login"
                         theme="light"
                     />
                 ) : (
@@ -25,10 +25,10 @@ export default function Navbar() {
                         <MenuList>
                             <MenuItem>
                                 <Link href={`/profile/${address}`}>
-                                    Profile
+                                    Perfil
                                 </Link>
                             </MenuItem>
-                            <MenuItem onClick={disconnect}>Sign Out</MenuItem>
+                            <MenuItem onClick={disconnect}>Sair</MenuItem>
                         </MenuList>
                     </Menu>
                 )}
